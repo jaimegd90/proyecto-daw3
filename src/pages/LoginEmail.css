@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Metal+Mania&display=swap');
+
+*{
+    font-family: 'bebas Neue';
+}
+
+.login h1 {
+    font-size: 70px;
+    color: white;
+    text-shadow: 0.1em 0.1em 0.2em black;
+    margin-bottom: -10px;
+    margin-top: -100px;
+    text-align: center;
+
+    }
+
+.login h2{
+    font-size: 25px;
+    color: black;
+    text-align: center;
+    
+    }
+
+    .body {
+        background-color: #68aaa7;
+    }

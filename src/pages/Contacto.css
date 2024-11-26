@@ -1,0 +1,29 @@
+
+.body1 {
+    background-color: #68aaa7;
+}
+.text1 {
+    text-align: center;
+    margin-top: -45px;
+}
+
+.text1 h1 {
+    font-size: 70px;
+    color: white;
+    text-shadow: 0.1em 0.1em 0.2em black;
+    margin-bottom: -10px;
+    margin-top: 100px;
+}
+
+.text1 h2 {
+    font-size: 30px;
+    color: black;
+    padding-left: 660px;
+    padding-right: 660px;
+    margin-bottom: 80px;
+    
+}
+
+.form {
+    margin-bottom: 80px;
+}

@@ -1,44 +1,83 @@
 .header {
-    background-color: #134c8f;
+    background-color: #458884;
     height: 100px;
     display: flex;
-      
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
 
 }
 
 .inicio {
-    margin-top: 35px;   
-    margin-left: 700px;  
+    margin-top: 30px;   
+    margin-left: 380px;  
 
+}
+
+.inicio a {
+    cursor: pointer;
+}
+
+.cierre {
+    margin-left: 200px;
+    margin-top: 2px;
+    text-shadow: 0.1em 0.1em 0.2em black;
+    
+}
+
+.cierre button {
+    cursor: pointer;
+}
+
+.cierre a {
+    cursor: pointer;
+}
+
+.cierre button:hover {
+    filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.7)) ;
+    transition: all 0.2s linear;
+}
+
+.cierre a:hover {
+    filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.7)) ;
+    transition: all 0.2s linear;
 }
 
 .inicio a {
     text-decoration: none;
     color: white;
     margin-right: 30px;
-      
+    font-size: 30px;
+    text-shadow: 0.1em 0.1em 0.2em black;
     
 }
 
+.inicio a:hover{
+    filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.7)) ;
+    transition: all 0.2s linear;
+}
+
+
 .img {
-    justify-content: left;
-    margin-top: 15px;
-    margin-left: 20px;
+    width: 80px;
+    margin-left: 300px;
+    margin-top: 5px;
 }
 
-.img2 {
-    width: 30px;
-    height: 30px;
-    margin-top: 30px;
+.img:hover {
+    filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.7)) ;
+    transition: all 0.2s linear;
 }
 
-.uni {
-    display: flex;
-    margin-left: 100px;
-}
+.sesion {
+    margin-top: 30px;   
 
-.uni p {
-    margin-top: 35px;
+}
+.sesion a {
+    text-align: right;
+    margin-left: 350px;
+    text-decoration: none;
     color: white;
-    margin-left: 10px;
+    margin-right: 30px;
+    font-size: 30px;
+    text-shadow: 0.1em 0.1em 0.2em black;
+    
 }

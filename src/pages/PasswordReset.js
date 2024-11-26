@@ -1,5 +1,5 @@
 import { useRef, useState } from "react";
-import { useAuth } from "../context/AuthProvider";
+import { useAuth } from "../supabase/AuthProvider";
 import { Alert, Button, Card, Form } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
@@ -46,7 +46,7 @@ const PasswordReset = () => {
           </Form>
         </Card.Body>
         <div>
-          Back to Login? <Link to={"/login"}>Login</Link>
+          ¿Quieres iniciar sesion? <Link to={"/"}>Login</Link>
         </div>
       </Card>
     </>

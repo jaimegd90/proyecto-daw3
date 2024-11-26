@@ -1,0 +1,13 @@
+.dropdown-option2 {
+    padding: 15px;                /* Más espacio en las opciones */
+    font-size: 18px;              /* Tamaño de texto más grande */
+    cursor: pointer;
+    list-style: none;
+    transition: background-color 0.3s ease;
+    
+  }
+  
+  .dropdown-option2:hover {
+    background-color: #f0f0f0;
+    
+  }

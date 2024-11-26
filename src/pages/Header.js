@@ -2,9 +2,8 @@ import React from 'react'
 import { supabase } from '../SupabaseService'
 import { useNavigate } from 'react-router-dom';
 import './Header.css'
-import img1 from './img/HeaderWebUniversae.png'
-import img2 from './img/universae.png'
-import './Calendario'
+import img1 from './img/Navbar.png'
+import { useAuth } from '../supabase/AuthProvider';
 
 
 const Header = () => {
@@ -12,25 +11,46 @@ const Header = () => {
   const handleButtonClick = () => {
     navigate('/');
   }
+  const { user, setUser } = useAuth();
+
+  const handleLogout = async () => {
+    await supabase.auth.signOut();
+    navigate('/'); // Redirige al usuario al inicio
+  };
+
+  const handleProtectedNavigation = (path) => {
+    if (!user) {
+      alert('Por favor, inicia sesión para acceder a esta página.');
+      navigate('/'); // Redirige a Home
+    } else {
+      navigate(path); // Navega a la ruta protegida
+    }
+  };
   
 
   return (
     <div className='header'>
-        <div className='img'>
-            <a href='/'><img src={img1} /></a>
+        <div>
+        <a href='inicio'><img src={img1} className='img' /></a>
         </div>
-        <div className='uni'>
-            <img className='img2' src={img2} /><p>Tus unicodes:</p>
-        </div>
+
         <div className='inicio'>
-      <a href='/'>Inicio</a>
-      <a href='calendario'>Calendario</a>
-      <a href='perfil'>Perfil</a>
-      <a href='tienda'>Tienda</a>
-      <a href='tutorias'>Mis Tutorías</a>
-      <a href='cerrarsesion'>Cerrar Sesión</a>
-    
+          <a href='/inicio'>Inicio</a>
+          <a onClick={() => handleProtectedNavigation('/djs')}>Djs</a>
+          <a onClick={() => handleProtectedNavigation('/discotecas')}>Discotecas</a>
+          <a onClick={() => handleProtectedNavigation('/contacto')}>Contacto</a>
+          </div>
+          <div className='cierre'>
+      {user ? (
+        <>
+          <a href='/perfil'><p style={{color:'white', fontSize:'20px'}}>Bienvenido, {user.email}</p></a>
+          <button href='/' style={{backgroundColor: '#68aaa7', color:'white', fontSize:'20px', marginTop:'-10px', textDecoration:'none'}} onClick={handleLogout}>Cerrar sesión</button>
+        </>
+      ) : (
+        <a href='/'onClick={handleButtonClick} style={{backgroundColor: '#458884', border: 'none', color:'white', fontSize:'25px', textDecoration:'none'}}>Inicia Sesión</a>
+      )}
       </div>
+      
     </div>
   )
 }

@@ -1,0 +1,189 @@
+.provincias {
+    display: flex;
+    margin-left: 150px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    justify-content: center;
+    
+}
+
+.text2 h2 {
+    font-size: 40px;
+    color: black;   
+    
+}
+
+.text2 a {
+    text-decoration: none;
+    
+}
+
+.text2 a:hover {
+    filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.7)) ;
+    transition: all 0.2s linear;
+}
+
+.text2 h1 {
+    font-size: 100px;
+    color: white;
+    text-shadow: 0.1em 0.1em 0.2em black;
+    margin-bottom: -55px;
+}
+
+.box1 {
+    margin-right: 180px;
+    margin-left: 60px;
+    
+    
+}
+
+.box1 h1{
+    font-size: 50px;
+    
+    
+}
+
+.box1 h3{
+    color: white;
+    text-shadow: 0.1em 0.1em 0.2em black;
+}
+
+.box3 h1{
+    font-size: 50px;
+    
+    
+}
+
+.box3 h3{
+    color: white;
+    text-shadow: 0.1em 0.1em 0.2em black;
+}
+
+.box0 h1{
+    font-size: 50px;
+    
+    
+}
+
+
+.box01 h2 {
+    margin-left: 100px;
+    padding-right: 550px;
+    margin-top: 60px;
+}
+
+.box0 h3{
+    color: white;
+    text-shadow: 0.1em 0.1em 0.2em black;
+    
+}
+
+.box h3:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: #333;
+    transition: left .8s;
+    }
+    .box h3:hover:after {
+    left: 0;
+    }
+
+.img1 {
+    width: 200px;
+    margin-left: -50px;
+    
+}
+
+.fotos h3:hover {
+    filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.7)) ;
+    transition: all 0.2s linear;
+}
+
+.img1:hover {
+    filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.7)) ;
+    transition: all 0.2s linear;
+}
+
+.img0:hover {
+    filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.7)) ;
+    transition: all 0.2s linear;
+}
+
+.img2:hover {
+    filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.7)) ;
+    transition: all 0.2s linear;
+}
+
+.img3:hover {
+    filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.7)) ;
+    transition: all 0.2s linear;
+}
+
+.img4:hover {
+    filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.7)) ;
+    transition: all 0.2s linear;
+}
+
+.img0 {
+    width: 320px;
+    height: 210px;
+    margin-left: -95px
+}
+
+.img3 {
+    width: 120px;
+    height: 210px;
+    margin-left: -40px 
+}
+
+.img4 {
+    width: 200px;
+    margin-left: -80px
+}
+
+
+
+.fotos {
+    display: flex;
+}
+
+.img00 {
+    width: 300px;
+    margin-top: 50px;
+    border-radius: 50px;
+}
+
+.img01 {
+    width: 200px;
+    margin-top: 50px;
+    border-radius: 50px;
+}
+
+.box11 {
+    margin-right: 180px;
+    margin-left: 60px;
+    
+    
+}
+
+.box1 img:hover {
+    filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.7)) ;
+    transition: all 0.2s linear;
+    
+    
+}
+
+.box11 h1{
+    font-size: 50px;
+        
+}
+
+.box11 h3{
+    color: white;
+    text-shadow: 0.1em 0.1em 0.2em black;
+    
+}

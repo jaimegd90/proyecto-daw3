@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { supabase } from '../SupabaseService';
-import Header from './Header';
+import Header2 from './Header2';
+import Footer from './Footer';
+import { Link } from 'react-router-dom';
 
 const SignUp = () => {
   const navigate = useNavigate();
@@ -41,7 +43,7 @@ const SignUp = () => {
       )
       if (error) throw error
       alert('Registrado correctamente')
-      navigate('/home');
+      navigate('/');
 
       
     } catch (error) {
@@ -56,37 +58,109 @@ const SignUp = () => {
     
     
       
-    <div>
-      <Header />
-      <form onSubmit={handleSubmit}>
+    <div className='body'>
+      <Header2 />
+      <div style={styles.container}>
+      <div className='login'>
+      <h1>Crea un usuario para acceder al mejor contenido del ocio nocturno</h1>
+      <h2>Si lo tienes ya creado previamente, te invitamos a que inicies sesión</h2>
+      </div>
+      <h2 style={styles.title}>Crear usuario</h2>
+      <form onSubmit={handleSubmit}  style={styles.form}>
         <input 
-          placeholder='Fullname'
+          placeholder='nombre'
           name='fullName'
           onChange={handleChange}
+          style={styles.input}
         />
 
         <input 
-          placeholder='Email'
+          placeholder='Correo electrónico'
           name='email'
           onChange={handleChange}
+          style={styles.input}
         />
 
         <input 
-          placeholder='Password'
+          placeholder='contraseña'
           name='password'
           type="password"
           onChange={handleChange}
+          style={styles.input}
         />
 
-        <button type='submit'>
-          Submit
+        <button type='submit' style={styles.button}>
+          Crear
         </button>
 
+        <h3>¿tienes ya usuario creado? <Link to={"/"} style={styles.register}>Inicia sesión aquí</Link></h3>
 
       </form>
-      <button onClick={handleButtonClick}>Inicia sesión</button>
+      
     </div>
+    <Footer />
+    </div>
+    
   )
 }
+
+
+// Estilos en línea para simplificar el ejemplo
+const styles = {
+  container: {
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    justifyContent: 'center',
+    height: '79vh',
+  },
+  register: {
+    color: '#000000'
+  },
+  title: {
+    fontSize: '30px',
+    color: '#333',
+    marginTop: '50px',
+  },
+  form: {
+    display: 'flex',
+    flexDirection: 'column',
+    width: '300px'
+  },
+  input: {
+    padding: '10px',
+    margin: '10px 0',
+    fontSize: '16px',
+    borderRadius: '5px',
+  },
+  button: {
+    padding: '10px',
+    fontSize: '16px',
+    backgroundColor: '#458884',
+    color: '#fff',
+    border: 'none',
+    borderRadius: '5px',
+    cursor: 'pointer'
+  },
+
+  toggleButton: {
+    marginTop: '10px',
+    fontSize: '20px',
+    color: '#000000',
+    backgroundColor: 'transparent',
+    border: 'none',
+    cursor: 'pointer'
+  },
+
+  error: {
+    color: 'red',
+    marginTop: '10px',
+    
+  },
+  success: {
+    color: 'green',
+    marginTop: '10px',
+  }
+};
 
 export default SignUp
